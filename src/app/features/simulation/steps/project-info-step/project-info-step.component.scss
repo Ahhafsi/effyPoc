@@ -1,0 +1,32 @@
+
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 200px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+  }
+  
+  .return-button {
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .next-button {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  
+  

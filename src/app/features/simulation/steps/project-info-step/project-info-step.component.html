@@ -1,0 +1,36 @@
+
+<app-container-panel title="Project Information" [displayBackBtn]="true">
+<form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="ownership" class="label-right">Ownership:</label>
+    <div class="field-left">
+      <select formControlName="ownership" id="ownership" required>
+        <option value="owner">Owner</option>
+        <option value="renter">Renter</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="peopleNumber" class="label-right">People in Household:</label>
+    <div class="field-left">
+      <input type="number" formControlName="peopleNumber" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="income" class="label-right">Household Income:</label>
+    <div class="field-left">
+      <input type="number" formControlName="income" min="10000" max="100000" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="surface" class="label-right">Surface Area:</label>
+    <div class="field-left">
+      <input type="number" formControlName="surface" required>
+    </div>
+  </div>
+  <button type="submit" [disabled]="projectForm.invalid" class="next-button">Next</button>
+</form>
+</app-container-panel>

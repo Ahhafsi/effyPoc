@@ -1,0 +1,13 @@
+
+
+<app-container-panel title="Result" [displayBackBtn]="true">
+    <p>Thank you {{ personalInfo.gender }} {{ personalInfo.firstName }} {{ personalInfo.lastName }}</p>
+  <ng-container *ngIf="isEligible; else notEligible">
+    <p>Congratulations! You are eligible for our assistance program.</p>
+    <p>Project cost: {{ projectCost.toFixed(2) }} €</p>    
+  </ng-container>
+
+  <ng-template #notEligible>
+    <p>Sorry, you are not eligible for our assistance program.</p>
+  </ng-template>
+</app-container-panel>
